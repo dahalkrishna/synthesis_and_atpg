@@ -1,0 +1,190 @@
+STIL 1.0 { Design 2005; }
+Header {
+   Title "  TetraMAX(R)  U-2022.12-i20221122_183213 STIL output";
+   Date "Sat May 25 18:33:59 2024";
+   Source "Minimal STIL for design `c17'";
+   History {
+      Ann {*  Incoming_Date "Sat May 25 17:11:54 2024"  *}
+      Ann {*  Incoming_Src "DFT Compiler S-2021.06-SP5-4"  *}
+      Ann {*     Uncollapsed Stuck Fault Summary Report *}
+      Ann {* ----------------------------------------------- *}
+      Ann {* fault class                     code   #faults *}
+      Ann {* ------------------------------  ----  --------- *}
+      Ann {* Detected                         DT         40 *}
+      Ann {* Possibly detected                PT          0 *}
+      Ann {* Undetectable                     UD          4 *}
+      Ann {* ATPG untestable                  AU          0 *}
+      Ann {* Not detected                     ND          0 *}
+      Ann {* ----------------------------------------------- *}
+      Ann {* total faults                                44 *}
+      Ann {* test coverage                           100.00% *}
+      Ann {* ----------------------------------------------- *}
+      Ann {*  *}
+      Ann {*            Pattern Summary Report *}
+      Ann {* ----------------------------------------------- *}
+      Ann {* #internal patterns                           6 *}
+      Ann {*     #basic_scan patterns                     6 *}
+      Ann {*     #total_test_data_volume                 60 *}
+      Ann {* ----------------------------------------------- *}
+      Ann {*  *}
+      Ann {* rule  severity  #fails  description *}
+      Ann {* ----  --------  ------  --------------------------------- *}
+      Ann {* B7    warning        1  undriven module output pin *}
+      Ann {* B8    warning        2  unconnected module input pin *}
+      Ann {*  *}
+      Ann {* There are no clocks *}
+      Ann {* There are no constraint ports *}
+      Ann {* There are no equivalent pins *}
+      Ann {* There are no net connections *}
+      Ann {* top_module_name = c17 *}
+      Ann {* Unified STIL Flow *}
+      Ann {* serial_flag = 0 *}
+      Ann {* PSDF = NO_PSD_FILE *}
+      Ann {* PSDS = 0 *}
+      Ann {* PSDA = #6#0#0/0 *}
+   }
+}
+Signals {
+   "N1" In; "N2" In; "N3" In; "N6" In; "N7" In; "si" In; "se" In; "N22" Out; "N23" Out;
+   "so" Out;
+}
+SignalGroups {
+   "all_inputs" = '"N1" + "N2" + "N3" + "N6" + "N7" + "si" + "se"'; // #signals=7
+   "all_outputs" = '"N22" + "N23" + "so"'; // #signals=3
+   "all_ports" = '"all_inputs" + "all_outputs"'; // #signals=10
+   "_pi" = '"all_inputs"'; // #signals=7
+   "_in" = '"N1" + "N2" + "N3" + "N6" + "N7" + "si" + "se"'; // #signals=7
+   "_po" = '"all_outputs"'; // #signals=3
+   "_out" = '"N22" + "N23" + "so"'; // #signals=3
+}
+Timing {
+   WaveformTable "_allclock_launch_capture_WFT_" {
+      Period '15ns';
+      Waveforms {
+         "all_inputs" { 0 { '0ns' D; } }
+         "all_inputs" { 1 { '0ns' U; } }
+         "all_inputs" { Z { '0ns' Z; } }
+         "all_inputs" { N { '0ns' N; } }
+         "all_outputs" { X { '0ns' X; '1ns' X; } }
+         "all_outputs" { H { '0ns' X; '1ns' H; } }
+         "all_outputs" { L { '0ns' X; '1ns' L; } }
+         "all_outputs" { T { '0ns' X; '1ns' T; } }
+      }
+   }
+   WaveformTable "_multiclock_capture_WFT_" {
+      Period '15ns';
+      Waveforms {
+         "all_inputs" { 0 { '0ns' D; } }
+         "all_inputs" { 1 { '0ns' U; } }
+         "all_inputs" { Z { '0ns' Z; } }
+         "all_inputs" { N { '0ns' N; } }
+         "all_outputs" { X { '0ns' X; '1ns' X; } }
+         "all_outputs" { H { '0ns' X; '1ns' H; } }
+         "all_outputs" { L { '0ns' X; '1ns' L; } }
+         "all_outputs" { T { '0ns' X; '1ns' T; } }
+      }
+   }
+   WaveformTable "_allclock_launch_WFT_" {
+      Period '15ns';
+      Waveforms {
+         "all_inputs" { 0 { '0ns' D; } }
+         "all_inputs" { 1 { '0ns' U; } }
+         "all_inputs" { Z { '0ns' Z; } }
+         "all_inputs" { N { '0ns' N; } }
+         "all_outputs" { X { '0ns' X; '1ns' X; } }
+         "all_outputs" { H { '0ns' X; '1ns' H; } }
+         "all_outputs" { L { '0ns' X; '1ns' L; } }
+         "all_outputs" { T { '0ns' X; '1ns' T; } }
+      }
+   }
+   WaveformTable "_allclock_capture_WFT_" {
+      Period '15ns';
+      Waveforms {
+         "all_inputs" { 0 { '0ns' D; } }
+         "all_inputs" { 1 { '0ns' U; } }
+         "all_inputs" { Z { '0ns' Z; } }
+         "all_inputs" { N { '0ns' N; } }
+         "all_outputs" { X { '0ns' X; '1ns' X; } }
+         "all_outputs" { H { '0ns' X; '1ns' H; } }
+         "all_outputs" { L { '0ns' X; '1ns' L; } }
+         "all_outputs" { T { '0ns' X; '1ns' T; } }
+      }
+   }
+   WaveformTable "_default_WFT_" {
+      Period '15ns';
+      Waveforms {
+         "all_inputs" { 0 { '0ns' D; } }
+         "all_inputs" { 1 { '0ns' U; } }
+         "all_inputs" { Z { '0ns' Z; } }
+         "all_inputs" { N { '0ns' N; } }
+         "all_outputs" { X { '0ns' X; '1ns' X; } }
+         "all_outputs" { H { '0ns' X; '1ns' H; } }
+         "all_outputs" { L { '0ns' X; '1ns' L; } }
+         "all_outputs" { T { '0ns' X; '1ns' T; } }
+      }
+   }
+}
+ScanStructures {
+   // Uncomment and modify the following to suit your design
+   // ScanChain "chain_name" { ScanIn "chain_input_name"; ScanOut "chain_output_name"; }
+}
+PatternBurst "_burst_" {
+   PatList { "_pattern_" {
+   }
+}}
+PatternExec {
+   PatternBurst "_burst_";
+}
+Procedures {
+   "multiclock_capture" {
+      W "_multiclock_capture_WFT_";
+      C { "N22"=X; "N23"=X; "so"=X; }
+      V { "_po"=###; "_pi"=\r7 # ; }
+   }
+   "allclock_capture" {
+      W "_allclock_capture_WFT_";
+      C { "N22"=X; "N23"=X; "so"=X; }
+      V { "_po"=###; "_pi"=\r7 # ; }
+   }
+   "allclock_launch" {
+      W "_allclock_launch_WFT_";
+      C { "N22"=X; "N23"=X; "so"=X; }
+      V { "_po"=###; "_pi"=\r7 # ; }
+   }
+   "allclock_launch_capture" {
+      W "_allclock_launch_capture_WFT_";
+      C { "N22"=X; "N23"=X; "so"=X; }
+      V { "_po"=###; "_pi"=\r7 # ; }
+   }
+   // Uncomment and modify the following to suit your design
+   // load_unload {
+      // V { } // force clocks off and scan enable pins active
+      // Shift { V { _si=#; _so=#; }} // pulse shift clocks
+   // }
+}
+MacroDefs {
+   "test_setup" {
+      W "_default_WFT_";
+      V { }
+      V { }
+   }
+}
+Pattern "_pattern_" {
+   W "_multiclock_capture_WFT_";
+   "precondition all Signals": C { "_pi"=\r7 0 ; "_po"=XXX; }
+   Macro "test_setup";
+   "pattern 0": Call "multiclock_capture" { 
+      "_pi"=0110011; "_po"=HHT; }
+   "pattern 1": Call "multiclock_capture" { 
+      "_pi"=1000010; "_po"=LLT; }
+   "pattern 2": Call "multiclock_capture" { 
+      "_pi"=1011110; "_po"=HLT; }
+   "pattern 3": Call "multiclock_capture" { 
+      "_pi"=1001101; "_po"=LHT; }
+   "pattern 4": Call "multiclock_capture" { 
+      "_pi"=0110111; "_po"=HHT; }
+   "pattern 5": Call "multiclock_capture" { 
+      "_pi"=0111110; "_po"=LLT; }
+}
+
+// Patterns reference 8 V statements, generating 8 test cycles

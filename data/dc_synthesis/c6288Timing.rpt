@@ -1,0 +1,81 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : c6288
+Version: S-2021.06-SP5-4
+Date   : Sun May 26 16:53:34 2024
+****************************************
+
+Operating Conditions: WORST   Library: saed90nm_max
+Wire Load Model Mode: enclosed
+
+  Startpoint: N18_reg (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: N6287_reg (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  c6288              16000                 saed90nm_max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.70       0.70
+  N18_reg/CLK (SDFFARX1)                   0.00       0.70 r
+  N18_reg/Q (SDFFARX1)                     0.80       1.50 r
+  U613/Q (AND3X1)                         38.50      40.00 r
+  U612/QN (NAND2X0)                        0.25      40.25 f
+  U618/ZN (INVX0)                          0.96      41.21 r
+  U617/Q (AO21X1)                          0.26      41.47 r
+  U878/Q (OA21X1)                          0.42      41.89 r
+  U881/Q (AO21X1)                          0.62      42.51 r
+  intadd_15/U27/S (FADDX1)                 0.84      43.35 f
+  intadd_29/U13/CO (FADDX1)                0.64      43.99 f
+  intadd_29/U12/CO (FADDX1)                0.60      44.58 f
+  intadd_29/U11/CO (FADDX1)                0.54      45.12 f
+  intadd_29/U10/CO (FADDX1)                0.54      45.67 f
+  intadd_29/U9/CO (FADDX1)                 0.54      46.21 f
+  intadd_29/U8/CO (FADDX1)                 0.54      46.75 f
+  intadd_29/U7/CO (FADDX1)                 0.54      47.29 f
+  intadd_29/U6/CO (FADDX1)                 0.54      47.83 f
+  intadd_29/U5/CO (FADDX1)                 0.54      48.37 f
+  intadd_29/U4/CO (FADDX1)                 0.54      48.91 f
+  intadd_29/U3/CO (FADDX1)                 0.54      49.45 f
+  intadd_29/U2/CO (FADDX1)                 0.51      49.96 f
+  U629/Q (OR2X1)                           0.45      50.41 f
+  intadd_15/U14/CO (FADDX1)                0.83      51.24 f
+  intadd_15/U13/CO (FADDX1)                0.54      51.78 f
+  intadd_15/U12/CO (FADDX1)                0.54      52.32 f
+  intadd_15/U11/CO (FADDX1)                0.54      52.86 f
+  intadd_15/U10/CO (FADDX1)                0.54      53.40 f
+  intadd_15/U9/CO (FADDX1)                 0.54      53.94 f
+  intadd_15/U8/CO (FADDX1)                 0.54      54.48 f
+  intadd_15/U7/CO (FADDX1)                 0.54      55.02 f
+  intadd_15/U6/CO (FADDX1)                 0.54      55.57 f
+  intadd_15/U5/CO (FADDX1)                 0.54      56.11 f
+  intadd_15/U4/CO (FADDX1)                 0.54      56.65 f
+  intadd_15/U3/CO (FADDX1)                 0.54      57.19 f
+  intadd_15/U2/CO (FADDX1)                 0.52      57.71 f
+  U626/Q (AND2X1)                          0.48      58.19 f
+  U1024/QN (NOR2X0)                        0.15      58.35 r
+  N6287_reg/D (SDFFARX1)                   0.03      58.38 r
+  data arrival time                                  58.38
+
+  clock clk (rise edge)                   60.00      60.00
+  clock network delay (ideal)              0.70      60.70
+  clock uncertainty                       -0.80      59.90
+  N6287_reg/CLK (SDFFARX1)                 0.00      59.90 r
+  library setup time                      -0.58      59.32
+  data required time                                 59.32
+  -----------------------------------------------------------
+  data required time                                 59.32
+  data arrival time                                 -58.38
+  -----------------------------------------------------------
+  slack (MET)                                         0.94
+
+
+1

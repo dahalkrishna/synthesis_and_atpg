@@ -1,0 +1,58 @@
+Loading db file '/synopsys/GPDK/SAED_EDK90nm/Digital_Standard_cell_Library/synopsys/models/saed90nm_max.db'
+Information: Updating design information... (UID-85)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : c432
+Version: S-2021.06-SP5-4
+Date   : Sun May 26 13:14:12 2024
+****************************************
+
+
+Library(s) Used:
+
+    saed90nm_max (File: /synopsys/GPDK/SAED_EDK90nm/Digital_Standard_cell_Library/synopsys/models/saed90nm_max.db)
+
+
+Operating Conditions: WORST   Library: saed90nm_max
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+c432                   8000              saed90nm_max
+
+
+Global Operating Voltage = 0.7  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  =  17.8169 uW   (91%)
+  Net Switching Power  =   1.7374 uW    (9%)
+                         ---------
+Total Dynamic Power    =  19.5543 uW  (100%)
+
+Cell Leakage Power     =   7.4056 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register          16.1761            0.6825        5.0307e+06           21.8892  (  81.19%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      1.6408            1.0549        2.3750e+06            5.0708  (  18.81%)
+--------------------------------------------------------------------------------------------------
+Total             17.8169 uW         1.7374 uW     7.4056e+06 pW        26.9599 uW
+1
